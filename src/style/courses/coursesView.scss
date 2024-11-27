@@ -1,0 +1,86 @@
+.courses-view-container{
+    width:90%;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    .view-courses.row{
+        padding:0;
+        margin:0;
+        box-shadow: 0 0.2px 0 rgba(0, 0, 0, 0.5); /* Đường viền dưới mỏng hơn 1px */
+        
+        .col-md-6.view-courses-box{
+            margin: 3rem 0;
+            padding: 20px 30px;
+            .view-courses-box-item-content{
+                text-align: start;
+                font-size: 110%;
+            font-weight: 500;
+            color:rgb(116, 116, 116);
+            }
+
+            .view-courses-box-item-title{
+                text-align: start;
+            }
+           
+        }
+    }
+    .view-courses-img-box{
+        padding:0;
+        margin:0;
+        border-radius: 15px;
+        .view-courses-image{
+            width:100%;
+            height:600px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+    .view-courses-data.row{
+        margin: 20px 0;
+        .col-md-6.view-courses-data-box{
+            padding:30px;
+            background-color: white;
+            width: calc(50% - 20px);
+            margin: 20px 10px;
+            border-radius: 10px;
+            .view-courses-data-item-title{
+                margin: 10px 0;
+                font-size: 60px;
+                font-weight:bold;
+                text-align: end;
+            }
+            .view-courses-data-item-day-title{
+                padding:10px 0;
+                font-size: 30px;
+                text-align: start;
+            }
+            .box-content-lesson{
+                padding:25px 15px;
+                margin: 25px 5px;
+                display:flex;
+                justify-content: space-between;
+                border: 1px solid rgba(197, 197, 197, 0.623);
+                border-radius: 5px;
+                .box-content-lesson-data{
+                    text-align: start;
+                    .box-content-lesson-data-stt{
+                        padding:0;
+                        margin:0;
+                    }
+                }
+                .box-content-lesson-data-end{
+                    display:flex;
+                    .box-content-lesson-data-clock{
+                        margin-right: 5px;
+                        width:24px;
+                        height:24px;
+                        object-fit: cover;
+                    }
+                }
+                &:hover {
+                    border: 1px solid rgba(255, 149, 0, 0.541); 
+                    box-shadow: 0 4px 15px rgba(255, 149, 0, 0.377);
+                }
+            }
+        }
+    }
+}

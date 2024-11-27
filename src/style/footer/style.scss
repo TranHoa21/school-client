@@ -1,0 +1,94 @@
+.footer-container{
+        width:100%;
+        background-color: rgba(255, 255, 255, 0.603);
+        padding: 20px 0 0 0;
+        margin: 4% auto;
+        .footer.row{
+            padding: 0;
+            margin:0;
+            width:90%;
+        margin: 0 auto;
+            
+            .col-md-5.footer-box{
+                padding: 20px;
+                text-align: start;
+                .logo-img{
+                    width:46px;
+                    height:46px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    margin: 20px 0;
+                  }
+                  .box-contact{
+                    display:flex;
+                    align-items: center;
+                    margin:10px 0;
+                    .contact-icon{
+                        width:24px;
+                        height:24px;
+                        object-fit: cover;
+                        margin: 5px;
+                    }
+                    .contact-data{
+                        margin:0;
+                        font-weight: 500;
+                        color:rgb(73, 73, 73)
+                    }
+                  }
+            }
+            .col-md-2.footer-box{
+                text-align: start;
+                padding: 20px;
+                padding: 20px;
+                .home-link{
+                    margin:20px 0;
+                }
+                .list-body{
+                    padding:5px 0;
+                    margin:0;
+                    font-weight: 500;
+                    color:rgb(70, 70, 70)
+
+                }
+            }
+            .col-md-3.footer-box{
+                text-align: start;
+                padding: 20px;
+                .social-profiles{
+                    margin: 20px 0;
+                }
+                .social-profiles-img{
+                    display: flex;
+                    a{ 
+                        padding: 10px;
+                        .image-social{
+                            width:38px;
+                            height:38px;
+                            object-fit: cover;
+                            padding:8px;
+                            margin:5px;
+                            background-color: #f7f7f7;
+                            box-shadow: 0 0 0 0.3px rgba(197, 197, 197, 0.8); 
+                            border-radius: 5px;
+                        }
+                    }
+                   
+                }
+            }
+        }
+        @media (max-width: 540px){
+            .footer-item{
+                text-decoration: none;
+                margin: 5px 15px;
+                color: black;
+                display: block;
+                text-align: center;
+                .footer-img{
+                    width: 24px ;
+                    height: 24px;
+                    margin: 0 5px;
+                }
+            } 
+        }
+    }
+    

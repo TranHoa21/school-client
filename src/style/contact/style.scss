@@ -1,0 +1,120 @@
+
+.contact-body{
+    width:90%;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    .online-courses.row{
+        padding:0;
+        margin:0;
+        box-shadow: 0 0.2px 0 rgba(0, 0, 0, 0.5); /* Đường viền dưới mỏng hơn 1px */
+        
+        .col-md-6.online-courses-box{
+            margin: 3rem 0;
+            padding: 20px 30px;
+            .online-courses-box-item-content{
+                text-align: start;
+                font-size: 110%;
+            font-weight: 500;
+            color:rgb(116, 116, 116);
+            }
+
+            .online-courses-box-item-title{
+                text-align: start;
+                
+            }
+           
+        }
+    }
+    .contact-container.row{
+        padding: 5% ;
+        .col-md-8.contact-form-container {
+            background-color: white; // Màu nền cho form
+            padding: 5% 5%;
+            border-radius: 10px; // Bo góc cho form
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Bóng đổ cho form
+            .contact-form {
+                display: flex;
+                flex-direction: column; // Sắp xếp cột
+                gap: 15px; // Khoảng cách giữa các trường
+        
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+        
+                    label {
+                        margin-bottom: 5px; // Khoảng cách giữa label và input
+                        font-weight: 500; // Đậm chữ
+                        color: rgb(116, 116, 116); // Màu chữ
+                        text-align: start;
+                    }
+        
+                    input,
+                    textarea {
+                        padding: 10px; // Padding cho input và textarea
+                        border: 1px solid #ddd; // Viền cho input
+                        border-radius: 5px; // Bo góc cho input
+                        font-size: 14px; // Kích thước chữ
+                        transition: border 0.3s; // Hiệu ứng chuyển tiếp
+        
+                        &:focus {
+                            border: 1px solid rgba(255, 149, 0, 1); // Màu viền khi focus
+                            outline: none; // Ẩn outline
+                        }
+                    }
+                }
+        
+                .submit-button {
+                    background-color: rgba(255, 149, 0, 1); // Màu nền cho nút
+                    color: white; // Màu chữ
+                    border: none; // Không có viền
+                    border-radius: 5px; // Bo góc cho nút
+                    padding: 10px; // Padding cho nút
+                    cursor: pointer; // Con trỏ khi hover
+                    transition: background-color 0.3s; // Hiệu ứng chuyển màu
+                    width:max-content;
+                    margin: 20px auto;
+                    &:hover {
+                        background-color: rgba(255, 149, 0, 0.8); // Màu khi hover
+                    }
+                }
+            }
+        }
+        .col-md-4.contact-form-container{
+            background-color: white;
+            border-left: 1px solid rgba(161, 161, 161, 0.473);
+            padding: 20px;
+            border-radius: 10px;
+            .contact-item{
+                margin: 20px;
+                padding: 30px;
+                border: 1px solid rgba(211, 211, 211, 0.445);
+                border-radius: 5px;
+                .contact-icon{
+                    width:30px;
+                    height:30px;
+                    object-fit: cover;
+                }
+            }
+            .contact-item.social-profiles{
+                .social-profiles-img{
+                    display: flex;
+                    a{ 
+                        padding: 10px;
+                        .image-social{
+                            width:38px;
+                            height:38px;
+                            object-fit: cover;
+                            padding:8px;
+                            margin:5px;
+                            background-color: #f7f7f7;
+                            box-shadow: 0 0 0 0.3px rgba(197, 197, 197, 0.8); 
+                            border-radius: 5px;
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+    
+}

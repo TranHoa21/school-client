@@ -1,0 +1,155 @@
+.about-body{
+    width:90%;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    .online-courses.row{
+        padding:0;
+        margin:0;
+        box-shadow: 0 0.2px 0 rgba(0, 0, 0, 0.5); /* Đường viền dưới mỏng hơn 1px */
+        
+        .col-md-6.online-courses-box{
+            margin: 3rem 0;
+            padding: 20px 30px;
+            .online-courses-box-item-content{
+                text-align: start;
+                font-size: 110%;
+            font-weight: 500;
+            color:rgb(116, 116, 116);
+            }
+
+            .online-courses-box-item-title{
+                text-align: start;
+                
+            }
+           
+        }
+    }
+    .achievements-container{
+        margin-top: 6%;
+        padding: 0 30px;
+
+        .achievements-title{
+            text-align: start;
+            margin: 10px 0;
+        }
+        .achievements-description{
+            text-align: start;
+            font-size: 110%;
+            font-weight: 500;
+            color:rgb(116, 116, 116);
+        }
+        .achievements-list.row{
+            margin-top: 3%;
+            .achievement-item.col-md-6.col-sm-12{
+                padding:30px;
+                background-color: white;
+                width: calc(50% - 20px);
+                margin: 20px 10px;
+                border-radius: 10px;
+                text-align: left;
+                .achievement-image{
+                    width:44px;
+                    height:44px;
+                    object-fit: cover;
+                    margin: 10px;
+                }
+                .achievement-name{
+                    margin: 15px 10px;
+                }
+                .achievement-details{
+                    margin: 15px 10px;
+                    font-size: 105%;
+                    font-weight: 500;
+                    color:rgb(116, 116, 116);
+                }
+            }
+        }
+    }
+    .goals-container{
+        margin-top: 6%;
+        padding: 0 30px;
+        .goals-title{
+            text-align: start;
+            margin: 10px 0;
+        }
+        .goals-description{
+            text-align: start;
+            font-size: 110%;
+            font-weight: 500;
+            color:rgb(116, 116, 116);
+        }
+        .goals-list.row{
+            margin-top: 3%;
+            .goal-item.col-md-6.col-sm-12{
+                padding:30px;
+                background-color: white;
+                width: calc(50% - 20px);
+                margin: 20px 10px;
+                border-radius: 10px;
+                text-align: left;
+                .goal-image{
+                    width:44px;
+                    height:44px;
+                    object-fit: cover;
+                    margin: 10px;
+                }
+                .goal-name{
+                    margin: 15px 10px;
+                }
+                .goal-details{
+                    margin: 15px 10px;
+                    font-size: 105%;
+                    font-weight: 500;
+                    color:rgb(116, 116, 116);
+                }
+            }
+        }
+    }
+    .digital-innovation.row {
+        background-color: #f9f9f9; // Màu nền nhẹ
+        padding: 30px 20px;
+        margin: 4% 30px;
+        border-radius: 15px; // Bo góc cho phần nền
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Bóng đổ nhẹ
+    
+        .col-md-10.digital-innovation-item {
+            .innovation-title {
+                width: 80%;
+                text-align: start;
+    
+                .highlight {
+                    color: rgba(255, 149, 0, 1);
+                }
+            }
+    
+            .innovation-description {
+                text-align: start;
+                font-size: 100%;
+                font-weight: 500;
+                color: rgb(116, 116, 116);
+                padding: 10px 0;
+            }
+        }
+    
+        .col-md-2.digital-innovation-item {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+    
+            .join-now-button {
+                background-color: rgba(255, 149, 0, 1);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                padding: 10px;
+                cursor: pointer; // Thêm con trỏ để chỉ ra đây là nút bấm
+                transition: background-color 0.3s; // Hiệu ứng chuyển màu khi hover
+    
+                &:hover {
+                    background-color: rgba(255, 149, 0, 0.8); // Hiệu ứng hover cho nút
+                }
+            }
+        }
+    }
+    
+}

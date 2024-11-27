@@ -1,0 +1,303 @@
+.pricing-body{
+    width:90%;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    .online-courses.row{
+        padding:0;
+        margin:0;
+        box-shadow: 0 0.2px 0 rgba(0, 0, 0, 0.5); /* Đường viền dưới mỏng hơn 1px */
+        
+        .col-md-6.online-courses-box{
+            margin: 3rem 0;
+            padding: 20px 30px;
+            .online-courses-box-item-content{
+                text-align: start;
+                font-size: 110%;
+            font-weight: 500;
+            color:rgb(116, 116, 116);
+            }
+
+            .online-courses-box-item-title{
+                text-align: start;
+                
+            }
+           
+        }
+    }
+    .our-pricing-container{
+        margin-top: 5%;
+        
+        
+        .box-our-pricing-content{
+            display:flex;
+            justify-content:center;
+            margin-bottom: 4%;
+            .our-pricing-content{
+                text-align: start;
+                color:#6e6e6e;
+                width: 70%;
+            }
+            .our-pricing-view-all{
+                font-weight: 500;
+                color: black;
+                background-color: white;
+                border-radius: 10px;
+                display:flex;
+                height:max-content;
+                padding: 15px;
+                border-radius: 10px;
+                .monthly{
+                    padding: 10px 15px;
+                    margin: 0 5px;
+                    background-color: rgba(255,149,0,255);
+                    color: white;
+                border-radius: 10px;
+
+                }
+                .yearly{
+                    padding: 10px;
+                border-radius: 10px;
+                margin: 0 5px;
+                }
+            }
+
+               
+            
+        }
+        .pricing-box.row{
+            background-color: white !important;
+            padding: 40px;
+            margin-top: 30px;
+            border-radius: 15px;
+            .pricing-box-item.col-md-6{
+                background-color: #f7f7f7;
+                margin: 0 15px; /* Adjust the margin */
+                width: calc(50% - 30px);
+                padding: 20px;
+                border-radius: 10px;
+                border: 1px solid rgb(224, 224, 224);
+                .pricing-box-item-title{
+                    padding: 10px 0;
+                    background-color: rgba(255, 149, 1, 0.096);
+                    border: 1px solid rgba(255, 149, 1, 0.349);
+                    border-radius: 5px;
+                    margin: 25px 0;
+                }
+                .pricing-box-item-month{
+                    .pricing-box-item-higlight{
+                        font-size: 70px;
+                        font-weight: bold;
+                        margin: 0 20px;
+                    }
+                }
+                .pricing-box-item-list{
+                    margin: 20px 0;
+                    padding: 30px 0 0 0;
+                    background-color: #ffffff;
+                    border: 1px solid rgb(224, 224, 224);
+                    border-radius: 15px;
+                    .item-list-title{
+                        padding: 20px 0
+                    }
+                    .item-list-data{
+                        display:flex;
+                        align-items: center;
+                        margin: 30px;
+                        border: 1px solid rgb(224, 224, 224);
+                        padding: 10px;
+                        border-radius: 5px;
+                        .item-list-image{
+                            width: 24px;
+                            height:24px;
+                            padding: 2px;
+                            background-color: rgba(255, 149, 1, 0.096);
+                            border: 1px solid rgba(255, 149, 1, 0.041);
+                            border-radius: 5px;
+                            margin: 0 10px;
+                        }
+                        .item-list-content{
+                            margin:0;
+                        }
+                    }
+                    .get-started{
+                        width:100%;
+                        text-align: center;
+                        background-color: rgba(255,149,0,255);
+                        color: white;
+                        padding: 20px;
+                        border-bottom-left-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    .questions-container{
+        .questions-box.row{
+            margin: 80px 0;
+            padding:80px 60px;
+            border-radius: 10px;
+            display:flex;
+            background-color: #ffffff; 
+            justify-content: space-between;
+            .col-md-4.questions-box-item{
+                //margin: 0 15px; /* Adjust the margin */
+                //width: calc(% - 30px);
+                background-color: #ffffff; 
+                border-radius: 15px;
+                //box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8); 
+                padding:0;
+                .questions-box-item-title{
+                    text-align: start;
+
+                }
+                .questions-box-item-content-data{
+                    margin: 15px 0;
+                    text-align: start;
+
+                }
+                .questions-box-item-faq{
+                    text-align: start;
+                    padding: 10px;
+                    background-color: #f7f7f7;
+                    border-radius: 10px;
+                    width:fit-content;
+                    box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8); 
+                    margin: 35px 0;
+                    .questions-box-item-faq-link{
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 500;
+                    }
+                }
+        }
+        .col-md-7.questions-box-item{
+            .questions-box-item-data{
+                box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8);
+                padding: 3px 45px 0px 45px;
+                border-radius: 15px;
+                .questions-box-item-question{
+                    display:flex;
+                    justify-content: space-between;
+                    margin: 10px 0;
+                    padding:15px 0;
+                   // border-bottom: 1px solid rgba(224, 224, 224, 0.8);
+                    .questions-box-item-question-data{
+                        font-weight: 500;
+                        text-align: start;
+                    }
+                    .btn-questions{
+                        border:none;
+                        background-color: #3d3d3d00;
+                        .questions-box-item-image{
+                            width: 34px;
+                            height:34px;
+                            padding: 2px;
+                            margin: 0 10px;
+                            background-color: rgba(255, 149, 1, 0.096);
+                            border: 1px solid rgba(255, 149, 1, 0.041);
+                            border-radius: 5px;
+                        }
+
+                    }
+                    
+                }
+                .questions-box-item-content{
+                    padding: 35px 0 30px 0;
+                    text-align: start;
+                    font-weight: 500;
+                    color:#6e6e6e
+                }
+                .questions-box-item-answer{
+                    display:flex;
+                    justify-content: space-between;
+                    padding: 10px 20px ;
+                    box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8);
+                    background-color: #f7f7f7;
+                    align-items: center;
+                    border-radius: 10px;
+                    //margin-bottom: 45px;;
+                    .questions-box-item-answer-data{
+                        margin:0;
+                        font-size: 15px;
+                    }
+                    .questions-box-item-image{
+                        width: 44px;
+                        height:44px;
+                        padding: 10px;
+                        background-color: rgba(255, 255, 255, 0.096);
+                        //border: 1px solid rgba(255, 149, 1, 0.041);
+                        border-radius: 50%;
+                        margin: 0 10px;
+                        background-color: #ffffff;
+                    }
+                }
+            }
+            .questions-box-item-data.expanded{
+                box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8);
+                padding: 30px 45px 45px 45px;
+                border-radius: 15px;
+                .questions-box-item-question{
+                    display:flex;
+                    justify-content: space-between;
+                    margin: 10px 0;
+                    padding:35px 0;
+                    border-bottom: 1px solid rgba(224, 224, 224, 0.8);
+                    .questions-box-item-question-data{
+                        font-weight: 500;
+                        text-align: start;
+                    }
+                    .btn-questions{
+                        border:none;
+                        background-color: #3d3d3d00;
+                        .questions-box-item-image{
+                            width: 34px;
+                            height:34px;
+                            padding: 2px;
+                            margin: 0 10px;
+                            background-color: rgba(255, 149, 1, 0.096);
+                            border: 1px solid rgba(255, 149, 1, 0.041);
+                            border-radius: 5px;
+                        }
+
+                    }
+                    
+                }
+                .questions-box-item-content{
+                    padding: 35px 0 30px 0;
+                    text-align: start;
+                    font-weight: 500;
+                    color:#6e6e6e
+                }
+                .questions-box-item-answer{
+                    display:flex;
+                    justify-content: space-between;
+                    padding: 10px 20px ;
+                    box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8);
+                    background-color: #f7f7f7;
+                    align-items: center;
+                    border-radius: 10px;
+                    .questions-box-item-answer-data{
+                        margin:0;
+                        font-size: 15px;
+                    }
+                    .questions-box-item-image{
+                        width: 44px;
+                        height:44px;
+                        padding: 10px;
+                        background-color: rgba(255, 255, 255, 0.096);
+                        //border: 1px solid rgba(255, 149, 1, 0.041);
+                        border-radius: 50%;
+                        margin: 0 10px;
+                        background-color: #ffffff;
+                    }
+                }
+            }
+
+
+        }
+    }
+    }
+}
