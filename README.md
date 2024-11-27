@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# **Dự Án Học Trực Tuyến**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Nền tảng học trực tuyến này cung cấp cho người dùng quyền truy cập vào nhiều khóa học chuyên sâu về thiết kế và phát triển. Với giao diện thân thiện và dễ sử dụng, dự án mang đến trải nghiệm học tập linh hoạt và hiệu quả.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Online Learning Project**
 
-### `npm start`
+This online learning platform provides users with access to a wide range of in-depth courses on design and development. With a user-friendly interface, the project offers a flexible and effective learning experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Cấu Trúc Dự Án / Project Structure**
 
-### `npm test`
+### **1. Trang Chính (`Home.js`) / Home Page**
+- Giới thiệu nền tảng học trực tuyến, các lợi ích và lý do chọn sử dụng.
+- Cung cấp liên kết nhanh để khám phá khóa học và xem bảng giá.
+  
+- Introduces the online learning platform, benefits, and reasons to use it.
+- Provides quick links to explore courses and view pricing.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **2. Khóa Học (`Courses.js`) / Courses Page**
+- Liệt kê tất cả các khóa học hiện có.
+- Hiển thị tên, mô tả ngắn gọn và hình ảnh minh họa cho từng khóa học.
 
-### `npm run build`
+- Lists all available courses.
+- Displays the name, brief description, and illustrative images for each course.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **3. Chi Tiết Khóa Học (`CoursesView.js`) / Course Details Page**
+- Hiển thị chi tiết từng khóa học, bao gồm:
+  - Thời gian học.
+  - Cấp độ (Cơ bản, Trung cấp, Nâng cao).
+  - Mô tả chi tiết và nội dung khóa học.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Displays detailed information about each course, including:
+  - Duration.
+  - Level (Beginner, Intermediate, Advanced).
+  - Detailed description and course content.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **4. Giới Thiệu (`AboutUs.js`) / About Us Page**
+- Cung cấp thông tin về tầm nhìn, sứ mệnh và đội ngũ phát triển nền tảng.
 
-### `npm run eject`
+- Provides information about the vision, mission, and development team of the platform.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **5. Bảng Giá (`Pricing.js`) / Pricing Page**
+- Hiển thị các gói giá:
+  - Miễn phí.
+  - Cơ bản.
+  - Cao cấp.
+- Bao gồm các tính năng cụ thể của từng gói để người dùng lựa chọn.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Displays pricing plans:
+  - Free.
+  - Basic.
+  - Premium.
+- Includes specific features of each plan for user selection.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **6. Liên Hệ (`Contact.js`) / Contact Page**
+- Cung cấp biểu mẫu liên lạc để gửi câu hỏi, ý kiến hoặc yêu cầu hỗ trợ.
+- Hiển thị thông tin liên hệ chi tiết (email, số điện thoại, địa chỉ).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Provides a contact form to submit questions, feedback, or support requests.
+- Displays detailed contact information (email, phone number, address).
 
-## Learn More
+### **7. Thanh Điều Hướng (`NavBar.js`) / Navigation Bar**
+- Cung cấp liên kết nhanh đến các trang chính trong ứng dụng.
+- Hỗ trợ chế độ phản hồi (responsive) cho các thiết bị khác nhau.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Provides quick links to the main pages in the application.
+- Supports responsive design for different devices.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **8. Chân Trang (`Footer.js`) / Footer**
+- Hiển thị liên kết đến các mạng xã hội.
+- Bao gồm thông tin bản quyền và các liên kết bổ trợ.
 
-### Code Splitting
+- Displays links to social media.
+- Includes copyright information and additional links.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## **Công Nghệ Sử Dụng / Technologies Used**
+- **React**: Xây dựng giao diện người dùng.
+- **Redux**: Quản lý trạng thái toàn cục.
+- **React Router**: Điều hướng trang động.
+- **Axios**: Thực hiện các yêu cầu HTTP.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **React**: For building user interfaces.
+- **Redux**: For global state management.
+- **React Router**: For dynamic page navigation.
+- **Axios**: For making HTTP requests.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## **Hướng Dẫn Cài Đặt / Installation Instructions**
 
-### Advanced Configuration
+### **1. Clone Repository**
+Sao chép dự án về máy tính của bạn:
+git clone <repository-url>
+2. Cài Đặt Phụ Thuộc / Install Dependencies
+Chạy lệnh sau để cài đặt các thư viện cần thiết:
+npm install
+3. Chạy Ứng Dụng / Run the Application
+Khởi chạy ứng dụng trong môi trường phát triển:
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Lưu Ý / Notes
 
-### Deployment
+Đảm bảo rằng bạn đã cài đặt Node.js và npm.
+Ứng dụng hỗ trợ chế độ ban ngày và ban đêm, có thể chuyển đổi dễ dàng.
+Ensure that you have Node.js and npm installed.
+The application supports day and night modes, which can be easily toggled.
+Chức Năng Nổi Bật / Key Features
+Giao diện người dùng thân thiện: Thiết kế đơn giản, trực quan.
+Hỗ trợ chế độ tối: Giảm mỏi mắt khi sử dụng lâu dài.
+Phản hồi nhanh: Tối ưu hóa cho cả thiết bị di động và máy tính.
+User-friendly interface: Simple, intuitive design.
+Dark mode support: Reduces eye strain during long usage.
+Quick responsiveness: Optimized for both mobile and desktop devices.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Liên Hệ / Contact
+Nếu bạn có bất kỳ câu hỏi hoặc ý kiến nào, hãy liên hệ với chúng tôi qua email:
+📧 support@skillbridge.com
 
-### `npm run build` fails to minify
+If you have any questions or feedback, please contact us via email:
+📧 support@skillbridge.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Cảm ơn bạn đã sử dụng nền tảng học trực tuyến của chúng tôi! 🚀
+
+Thank you for using our online learning platform! 🚀
