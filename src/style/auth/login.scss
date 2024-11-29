@@ -1,0 +1,408 @@
+.login-body.row{
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+    .col-md-7.login-item{
+        padding:20px 40px;
+        .students-title{
+            text-align: start;
+            padding: 20px 0;
+
+        }
+        .students-content{
+            text-align: start;
+            width:80%;
+            padding-bottom: 20px ;
+            font-size: 105%;
+            font-weight: 500;
+            color:#696969
+
+        }
+        .box-item.testimonials{
+            margin: 0 15px; /* Adjust the margin */
+            width: 100%;
+            background-color: #ffffff; 
+            border-radius: 15px;
+            box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8); 
+            padding:0;
+            .box-item-testimonials{
+                text-align: start;
+                padding:  30px 30px 40px 30px ;
+                border-bottom: 1px solid rgba(197, 197, 197, 0.8);
+            }
+            .box-item-user{
+                display:flex;
+                justify-content: space-between;
+                padding: 30px ;
+                background-color: #fcfcfc;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                box-shadow: 0 0 0 0.3px rgba(197, 197, 197, 0.8); 
+                .user-name-item{
+                    display:flex;
+                    align-items: center;
+                    font-weight: 500;
+                    .user-avatar-item{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 5px;
+                        object-fit: cover;
+                        margin: 0 10px 0 0 ; 
+                    }
+                }
+                .read-full{
+                    height:50px;
+                    display:flex;
+                    align-items: center;
+                    background-color: #f0f0f0;
+                    border-radius: 10px;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 500;
+                        padding: 10px;
+                    }
+                }
+                
+            }
+        }
+        .prev, .next {
+            margin: 10px 5px ;
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .prev {
+            left: 10px;
+        }
+        
+        .next {
+            right: 10px;
+        }
+    }
+    .col-md-5.login-item{
+        padding:30px;
+        background-color: white;
+        border-radius: 10px;
+        .signup-title{
+            text-align: start;
+            padding: 20px 0;
+        }
+        .signup-note{
+            text-align: start;
+            font-weight: 500;
+            color:#696969;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-top: 30px ;        
+            .form-label {
+                display: block; // Hiển thị label như một block để dễ căn chỉnh
+                text-align: start; // Căn chỉnh label về phía start
+                margin-bottom: 0.5rem; // Khoảng cách giữa label và input
+                font-weight: 500; // Đậm cho label
+                color: #464646; // Màu chữ cho label
+                font-size: 110%;
+            }
+        
+            .form-control {
+                width: 100%; // Đảm bảo input chiếm toàn bộ chiều rộng
+                padding: 15px; // Padding cho input
+                border: 1px solid #e9e9e9; // Đường viền cho input
+                border-radius: 4px; // Bo góc cho input
+                font-size: 1rem; // Kích thước chữ cho input
+                background-color: #f8f8f8;
+                &:focus {
+                    border-color: #ffae19; // Màu viền khi focus
+                    outline: none; // Tắt outline mặc định
+                    box-shadow: 0 0 5px rgba(255, 218, 6, 0.5); // Hiệu ứng bóng khi focus
+                }
+            }
+           
+        }
+
+        .forgot-password{
+            text-decoration: none;
+            font-weight: 500;
+            color:#696969;
+            text-align: end;
+            display:block
+        }
+        .custom-checkbox{
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            .checkbox-input{
+                width: 20px;
+                height:20px;
+                color: #b1b1b1;
+                margin-right: 10px;
+            }
+            .checkbox-label{
+                font-size: 100%;
+                font-weight: 500;
+                color:#696969;
+                .checkbox-a{
+                    color:#696969;
+                }
+            }
+        }
+        .btn.signup-button{
+            width:100%;
+            padding:10px;
+            background-color:rgba(255, 149, 0, 1);
+            color:white;
+            margin: 20px 0;
+        }
+        .or {
+            margin: 10px 0;
+            text-align: center; // Canh giữa chữ
+            position: relative; // Để sử dụng position absolute cho pseudo-element
+        
+            &::before {
+                content: '';
+                display: block;
+                border-top: 1px solid rgb(133, 133, 133);
+                position: absolute;
+                top: 50%; // Đặt đường border ở giữa
+                left: 0;
+                right: 0;
+                z-index: 1; // Đảm bảo đường border nằm dưới chữ
+            }
+        
+            &::after {
+                content: 'OR'; // Chữ "OR"
+                position: relative;
+                z-index: 2; // Đảm bảo chữ nằm trên đường border
+                background: white; // Để làm nổi bật chữ
+                padding: 0 10px; // Thêm một chút padding để chữ không chạm vào border
+            }
+        }
+        .btn.signup-with-google{
+            width:100%;
+            padding:10px;
+            background-color:rgb(231, 231, 231);
+            margin: 20px 0;
+            .google-icon{
+                width:34px;
+                height:34px;
+                object-fit: cover;
+                margin-right: 5px;
+            }
+        }
+        .already{
+        .to-login{
+            font-weight: 500;
+            color:#1d1d1d
+        }
+        }
+    }
+    
+}
+@media (max-width: 576px){
+    .login-body.row{
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px 0;
+        .col-md-7.login-item{
+            padding:10px 20px;
+            .students-title{
+                text-align: start;
+                padding: 10px 0;
+    
+            }
+            .students-content{
+                text-align: start;
+                width:80%;
+                padding-bottom: 10px ;
+                font-size: 95%;
+                font-weight: 500;
+                color:#696969
+    
+            }
+            .box-item.testimonials{
+                margin: 0 7px; /* Adjust the margin */
+                width: 100%;
+                background-color: #ffffff; 
+                border-radius: 15px;
+                box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8); 
+                padding:0;
+                .box-item-testimonials{
+                    text-align: start;
+                    padding:  15px 15px 20px 15px ;
+                    border-bottom: 1px solid rgba(197, 197, 197, 0.8);
+                }
+                .box-item-user{
+                    display:flex;
+                    justify-content: space-between;
+                    padding: 15px ;
+                    background-color: #fcfcfc;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    box-shadow: 0 0 0 0.3px rgba(197, 197, 197, 0.8); 
+                    .user-name-item{
+                        display:flex;
+                        align-items: center;
+                        font-weight: 500;
+                        .user-avatar-item{
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 5px;
+                            object-fit: cover;
+                            margin: 0 10px 0 0 ; 
+                        }
+                    }
+                    .read-full{
+                        height:25px;
+                        display:flex;
+                        align-items: center;
+                        background-color: #f0f0f0;
+                        border-radius: 10px;
+                        a{
+                            text-decoration: none;
+                            color: black;
+                            font-weight: 500;
+                            padding: 10px;
+                        }
+                    }
+                    
+                }
+            }
+            .prev, .next {
+                margin: 5px 2px ;
+                background: rgba(255, 255, 255, 0.7);
+                border: none;
+                cursor: pointer;
+                padding: 5px;
+            }
+            
+            .prev {
+                left: 5px;
+            }
+            
+            .next {
+                right: 5px;
+            }
+        }
+        .col-md-5.login-item{
+            padding:15px;
+            background-color: white;
+            border-radius: 10px;
+            .signup-title{
+                text-align: start;
+                padding: 10px 0;
+            }
+            .signup-note{
+                text-align: start;
+                font-weight: 500;
+                color:#696969;
+                margin-bottom: 8px;
+            }
+            .form-group {
+                margin-top: 15px ;        
+                .form-label {
+                    display: block; // Hiển thị label như một block để dễ căn chỉnh
+                    text-align: start; // Căn chỉnh label về phía start
+                    margin-bottom: 0.5rem; // Khoảng cách giữa label và input
+                    font-weight: 500; // Đậm cho label
+                    color: #464646; // Màu chữ cho label
+                    font-size: 90%;
+                }
+            
+                .form-control {
+                    width: 100%; // Đảm bảo input chiếm toàn bộ chiều rộng
+                    padding: 8px; // Padding cho input
+                    border: 1px solid #e9e9e9; // Đường viền cho input
+                    border-radius: 4px; // Bo góc cho input
+                    font-size: 1rem; // Kích thước chữ cho input
+                    background-color: #f8f8f8;
+                    &:focus {
+                        border-color: #ffae19; // Màu viền khi focus
+                        outline: none; // Tắt outline mặc định
+                        box-shadow: 0 0 5px rgba(255, 218, 6, 0.5); // Hiệu ứng bóng khi focus
+                    }
+                }
+               
+            }
+    
+            .forgot-password{
+                text-decoration: none;
+                font-weight: 500;
+                color:#696969;
+                text-align: end;
+                display:block
+            }
+            .custom-checkbox{
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                .checkbox-input{
+                    width: 20px;
+                    height:20px;
+                    color: #b1b1b1;
+                    margin-right: 10px;
+                }
+                .checkbox-label{
+                    font-size: 100%;
+                    font-weight: 500;
+                    color:#696969;
+                    .checkbox-a{
+                        color:#696969;
+                    }
+                }
+            }
+            .btn.signup-button{
+                width:100%;
+                padding:5px;
+                background-color:rgba(255, 149, 0, 1);
+                color:white;
+                margin: 10px 0;
+            }
+            .or {
+                margin: 10px 0;
+                text-align: center; // Canh giữa chữ
+                position: relative; // Để sử dụng position absolute cho pseudo-element
+            
+                &::before {
+                    content: '';
+                    display: block;
+                    border-top: 1px solid rgb(133, 133, 133);
+                    position: absolute;
+                    top: 50%; // Đặt đường border ở giữa
+                    left: 0;
+                    right: 0;
+                    z-index: 1; // Đảm bảo đường border nằm dưới chữ
+                }
+            
+                &::after {
+                    content: 'OR'; // Chữ "OR"
+                    position: relative;
+                    z-index: 2; // Đảm bảo chữ nằm trên đường border
+                    background: white; // Để làm nổi bật chữ
+                    padding: 0 10px; // Thêm một chút padding để chữ không chạm vào border
+                }
+            }
+            .btn.signup-with-google{
+                width:100%;
+                padding:10px;
+                background-color:rgb(231, 231, 231);
+                margin: 20px 0;
+                .google-icon{
+                    width:34px;
+                    height:34px;
+                    object-fit: cover;
+                    margin-right: 5px;
+                }
+            }
+            .already{
+            .to-login{
+                font-weight: 500;
+                color:#1d1d1d
+            }
+            }
+        }
+        
+    }
+}

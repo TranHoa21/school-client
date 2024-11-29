@@ -9,6 +9,9 @@ import CoursesView from "./view/courses/CoursesView.js";
 import Pricing from "./view/pricing/Pricing.js"
 import { useSelector } from 'react-redux';
 import Contact from "./view/contact/contact.js";
+import SignUp from "./view/auth/Signup.js";
+import Login from "./view/auth/Login.js";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -30,6 +33,8 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
 
       </Routes>
       <Footer />

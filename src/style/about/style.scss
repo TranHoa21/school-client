@@ -153,3 +153,160 @@
     }
     
 }
+@media (max-width: 576px){
+    .about-body{
+        width:90%;
+        padding: 20px 0 0 0;
+        margin: 0 auto;
+        .online-courses.row{
+            padding:0;
+            margin:0;
+            box-shadow: 0 0.2px 0 rgba(0, 0, 0, 0.5); /* Đường viền dưới mỏng hơn 1px */
+            
+            .col-md-6.online-courses-box{
+                padding: 10px 15px;
+                margin:5px;
+                .online-courses-box-item-content{
+                    text-align: start;
+                    font-size: 90%;
+                font-weight: 500;
+                color:rgb(116, 116, 116);
+                }
+    
+                .online-courses-box-item-title{
+                    text-align: start;
+                    
+                }
+               
+            }
+        }
+        .achievements-container{
+            margin-top: 3%;
+            padding: 0 15px;
+    
+            .achievements-title{
+                text-align: start;
+                margin: 5px 0;
+            }
+            .achievements-description{
+                text-align: start;
+                font-size: 90%;
+                font-weight: 500;
+                color:rgb(116, 116, 116);
+            }
+            .achievements-list.row{
+                margin-top: 2%;
+                .achievement-item.col-md-6.col-sm-12{
+                    padding:15px;
+                    background-color: white;
+                    width: calc(100% - 10px);
+                    margin: 10px 5px;
+                    border-radius: 10px;
+                    text-align: left;
+                    .achievement-image{
+                        width:22px;
+                        height:22px;
+                        object-fit: cover;
+                        margin: 5px;
+                    }
+                    .achievement-name{
+                        margin: 8px 5px;
+                    }
+                    .achievement-details{
+                        margin: 8px 5px;
+                        font-size: 85%;
+                        font-weight: 500;
+                        color:rgb(116, 116, 116);
+                    }
+                }
+            }
+        }
+        .goals-container{
+            margin-top: 3%;
+            padding: 0 15px;
+            .goals-title{
+                text-align: start;
+                margin: 5px 0;
+            }
+            .goals-description{
+                text-align: start;
+                font-size: 90%;
+                font-weight: 500;
+                color:rgb(116, 116, 116);
+            }
+            .goals-list.row{
+                margin-top: 2%;
+                .goal-item.col-md-6.col-sm-12{
+                    padding:15px;
+                    background-color: white;
+                    width: calc(100% - 10px);
+                    margin: 10px 5px;
+                    border-radius: 10px;
+                    text-align: left;
+                    .goal-image{
+                        width:22px;
+                        height:22px;
+                        object-fit: cover;
+                        margin: 5px;
+                    }
+                    .goal-name{
+                        margin: 8px 5px;
+                    }
+                    .goal-details{
+                        margin: 8px 5px;
+                        font-size: 85%;
+                        font-weight: 500;
+                        color:rgb(116, 116, 116);
+                    }
+                }
+            }
+        }
+        .digital-innovation.row {
+            background-color: #f9f9f9; // Màu nền nhẹ
+            padding: 15px 10px;
+            margin: 2% 15px;
+            border-radius: 15px; // Bo góc cho phần nền
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Bóng đổ nhẹ
+        
+            .col-md-10.digital-innovation-item {
+                .innovation-title {
+                    width: 80%;
+                    text-align: start;
+        
+                    .highlight {
+                        color: rgba(255, 149, 0, 1);
+                    }
+                }
+        
+                .innovation-description {
+                    text-align: start;
+                    font-size: 90%;
+                    font-weight: 500;
+                    color: rgb(116, 116, 116);
+                    padding: 5px 0;
+                }
+            }
+        
+            .col-md-2.digital-innovation-item {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+        
+                .join-now-button {
+                    background-color: rgba(255, 149, 0, 1);
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                    padding: 10px;
+                    cursor: pointer; // Thêm con trỏ để chỉ ra đây là nút bấm
+                    transition: background-color 0.3s; // Hiệu ứng chuyển màu khi hover
+        
+                    &:hover {
+                        background-color: rgba(255, 149, 0, 0.8); // Hiệu ứng hover cho nút
+                    }
+                }
+            }
+        }
+        
+    }
+}
