@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 import Contact from "./view/contact/contact.js";
 import SignUp from "./view/auth/Signup.js";
 import Login from "./view/auth/Login.js";
-
+import UserView from "./view/user/UserView.js"
 import {
   BrowserRouter as Router,
   Routes,
@@ -35,7 +35,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-
+        <Route path="/user_view/:userId" element={<UserView />} />
       </Routes>
       <Footer />
     </div>

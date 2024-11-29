@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import "../../style/auth/login.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux"; // Import useDispatch
+import { loginStart, loginSuccess, loginFailure } from "../../redux/slices/authSlice"; // Import actions
+import { setUser } from '../../redux/slices/userSlice';
 
 const Login = () => {
     const testimonialsData = [
@@ -29,13 +32,47 @@ const Login = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const prevTestimonial = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonialsData.length) % testimonialsData.length);
     };
 
     const nextTestimonial = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
+    };
+    const handleLogin = async (e) => {
+        e.preventDefault(); // Ngăn chặn gửi form mặc định
+        dispatch(loginStart());
+        try {
+            const response = await axios.post('http://localhost:3003/api/v1/auth/login', {
+                email: email,
+                password: password,
+            });
+            const userData = response.data;
+            const userId = userData.user._id
+            // Xử lý thành công (ví dụ: lưu token, chuyển hướng đến trang chính)
+            console.log("User logged in successfully:", response.data);
+            dispatch(loginSuccess(userData));
+            dispatch(setUser(userData));
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('userId', userId);
+            localStorage.setItem('userRole', userData.role);
+            localStorage.setItem('userName', userData.name);
+            localStorage.setItem('userEmail', userData.email);
+            alert("Đăng nhập thành công! Tự động chuyển hướng sau 2 giây");
+            setTimeout(() => {
+                navigate('/'); // Chuyển hướng đến trang đăng nhập sau 5 giây
+            }, 2000);
+
+        } catch (error) {
+            console.error("Error during login:", error);
+            alert("Đăng nhập không thành công! Có lỗi khi đăng nhập");
+            dispatch(loginFailure(error.response.data));
+            // Xử lý lỗi (hiển thị thông báo lỗi cho người dùng)
+        }
     };
 
     return (
@@ -44,34 +81,40 @@ const Login = () => {
             <div className="col-md-5 login-item order-1 order-md-2">
                 <h1 className="signup-title">Login</h1>
                 <p className="signup-note">Welcome back! Please log in to access your account.</p>
-                <div className="form-group">
-                    <label htmlFor="email" className="form-label">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        className="form-control"
-                        placeholder="Enter your Email"
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        className="form-control"
-                        placeholder="Enter your Password"
-                        required
-                    />
-                </div>
-                <Link to="" className="forgot-password">Fogot Password?</Link>
-                <label className="custom-checkbox">
-                    <input type="checkbox" className="checkbox-input" />
-                    <span className="checkbox-label">
-                        Remember Me
-                    </span>
-                </label>
-                <button className="btn signup-button">Login</button>
+                <form onSubmit={handleLogin}>
+                    <div className="form-group">
+                        <label htmlFor="email" className="form-label">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            className="form-control"
+                            placeholder="Enter your Email"
+                            required
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="password" className="form-label">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            className="form-control"
+                            placeholder="Enter your Password"
+                            required
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <Link to="" className="forgot-password">Forgot Password?</Link>
+                    <label className="custom-checkbox">
+                        <input type="checkbox" className="checkbox-input" />
+                        <span className="checkbox-label">
+                            Remember Me
+                        </span>
+                    </label>
+                    <button type="submit" className="btn signup-button">Login</button>
+                </form>
                 <p className="or"></p>
                 <button className="btn signup-with-google">
                     <img className="google-icon" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1729519358/google_2504914_pe1zmv.png" alt="Google Icon" />

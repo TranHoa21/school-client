@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../style/auth/signup.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
     const testimonialsData = [
@@ -29,6 +29,10 @@ const SignUp = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [fullName, setFullName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate(); // Để điều hướng sau khi đăng ký thành công
 
     const prevTestimonial = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonialsData.length) % testimonialsData.length);
@@ -37,6 +41,29 @@ const SignUp = () => {
     const nextTestimonial = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
     };
+    const handleSignUp = async (e) => {
+        e.preventDefault(); // Ngăn chặn gửi form mặc định
+
+        try {
+            const response = await axios.post('http://localhost:3003/api/v1/auth/signup', {
+                name: fullName,
+                email: email,
+                password: password,
+            });
+
+            if (response.status === 200) {
+                alert("Đăng ký thành công! Tự động chuyển hướng sau 2 giây");
+                setTimeout(() => {
+                    navigate('/login'); // Chuyển hướng đến trang đăng nhập sau 5 giây
+                }, 2000);
+
+                console.log("User signed up successfully:", response.data);
+            }
+        } catch (error) {
+            console.error("Error during signup:", error);
+            // Xử lý lỗi (hiển thị thông báo lỗi cho người dùng)
+        }
+    };
 
     return (
         <div className="signup-body row">
@@ -44,43 +71,51 @@ const SignUp = () => {
             <div className="col-md-5 signup-item order-1 order-md-2">
                 <h1 className="signup-title">Sign Up</h1>
                 <p className="signup-note">Create an account to unlock exclusive features.</p>
-                <div className="form-group">
-                    <label htmlFor="name" className="form-label">Full Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        className="form-control"
-                        placeholder="Enter your FullName"
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email" className="form-label">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        className="form-control"
-                        placeholder="Enter your Email"
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        className="form-control"
-                        placeholder="Enter your Password"
-                        required
-                    />
-                </div>
-                <label className="custom-checkbox">
-                    <input type="checkbox" className="checkbox-input" />
-                    <span className="checkbox-label">
-                        I agree with <a href="#!" className="checkbox-a">Terms of Use</a> and <a href="#!" className="checkbox-a">Privacy Policy</a>
-                    </span>
-                </label>
-                <button className="btn signup-button">Sign Up</button>
+                <form onSubmit={handleSignUp}>
+                    <div className="form-group">
+                        <label htmlFor="name" className="form-label">Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            className="form-control"
+                            placeholder="Enter your FullName"
+                            required
+                            value={fullName}
+                            onChange={(e) => setFullName(e.target.value)}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email" className="form-label">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            className="form-control"
+                            placeholder="Enter your Email"
+                            required
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="password" className="form-label">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            className="form-control"
+                            placeholder="Enter your Password"
+                            required
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <label className="custom-checkbox">
+                        <input type="checkbox" className="checkbox-input" />
+                        <span className="checkbox-label">
+                            I agree with <a href="#!" className="checkbox-a">Terms of Use</a> and <a href="#!" className="checkbox-a">Privacy Policy</a>
+                        </span>
+                    </label>
+                    <button type="submit" className="btn signup-button">Sign Up</button>
+                </form>
                 <p className="or"></p>
                 <button className="btn signup-with-google">
                     <img className="google-icon" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1729519358/google_2504914_pe1zmv.png" alt="Google Icon" />

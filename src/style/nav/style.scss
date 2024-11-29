@@ -122,12 +122,28 @@
             text-decoration: none;
             color: rgb(32, 32, 32);
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            .user-icon{
+              width:26px;
+              height:26px;
+              object-fit: cover;
+              
+            }
             .logo-img{
               width:46px;
               height:46px;
               object-fit: cover;
               border-radius: 10px;
             }
+        }
+        .dropdown-toggle.btn.btn-primary{
+          &:hover{
+            background-color: rgba(255, 149, 0, 1);
+          }        }
+        .dropdown-toggle.show.btn.btn-primary{
+          background-color: rgba(255, 149, 0, 1);
+          &:hover{
+            background-color: rgba(255, 149, 0, 1);
+          }
         }
         .login{
           background-color: rgba(255,149,0,255);

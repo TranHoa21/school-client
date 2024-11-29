@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from "react";
 import "../../style/nav/style.scss";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-import { setLanguage } from '../../features/language/languageSlice';
-import { setTheme } from '../../features/theme/themeSlice';
+import { Dropdown } from 'react-bootstrap';
+import { logout } from '../../redux/slices/authSlice'; // Action logout
+import { clearUser } from '../../redux/slices/userSlice';
 
 const NavbarCon = () => {
     const location = useLocation();
     const pathname = location.pathname;
-    const { i18n } = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    // Lấy trạng thái ngôn ngữ từ Redux
-    const language = useSelector((state) => state.language.language);
     const theme = useSelector((state) => state.theme.theme);
     const dispatch = useDispatch();
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 540);
-
-
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    const userId = localStorage.getItem('userId');
+    const navigate = useNavigate();
+    const user = useSelector((state) => state.user);
 
 
     const handleToggleMenu = () => {
@@ -38,6 +37,20 @@ const NavbarCon = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    const handleViewAccount = () => {
+        navigate(`/user_view/${userId}`);
+    };
+    const handleLogout = () => {
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('userId');
+        localStorage.removeItem('userRole');
+        localStorage.removeItem('userName');
+        localStorage.removeItem('userEmail');
+        localStorage.removeItem('cartInitialized');
+        dispatch(logout());
+        dispatch(clearUser());
+        navigate('/');
+    }
 
     return (
         <>
@@ -49,7 +62,7 @@ const NavbarCon = () => {
             <div className={`nav-container ${theme === 'night' ? 'night-theme' : 'day-theme'} ${isMenuOpen ? 'active' : ''}`}>
                 <div className="nav-menu">
                     {/* Logo */}
-                    <NavLink className="nav-link moblie" to="/home">
+                    <NavLink className="nav-link moblie" to="/">
                         <img className="logo-img" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728318311/100_gl2oqb.png" />
                     </NavLink>
                     {/* Các liên kết nav */}
@@ -67,8 +80,22 @@ const NavbarCon = () => {
                     )}
                 </div>
                 <div className="nav-menu mobile">
-                    <NavLink className={`nav-link ${pathname === '/signup' ? 'active' : ''}`} to="/signup">Sign Up</NavLink>
-                    <NavLink className={`nav-link login ${pathname === '/login' ? 'active' : ''}`} to="/login">Login</NavLink>
+                    {isLoggedIn ? (
+                        <Dropdown>
+                            <Dropdown.Toggle className="nav-link" id="user-dropdown">
+                                <img className="user-icon" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1729716444/user_456212_rcmnpi.png" />
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={handleViewAccount}>Xem chi tiết tài khoản</Dropdown.Item>
+                                <Dropdown.Item onClick={handleLogout}>Đăng xuất</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    ) : (
+                        <>
+                            <NavLink className={`nav-link ${pathname === '/signup' ? 'active' : ''}`} to="/signup">Sign Up</NavLink>
+                            <NavLink className={`nav-link login ${pathname === '/login' ? 'active' : ''}`} to="/login">Login</NavLink>
+                        </>
+                    )}
                 </div>
                 {/* Nút Unlock và Explore Courses */}
                 {isMobile && (
