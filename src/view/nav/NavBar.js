@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../style/nav/style.scss";
 import { NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
@@ -16,29 +16,28 @@ const NavbarCon = () => {
     const language = useSelector((state) => state.language.language);
     const theme = useSelector((state) => state.theme.theme);
     const dispatch = useDispatch();
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 540);
 
-    const currentLanguage = language === 'vi' ? 'Tiếng Việt' : 'English';
-    const isDay = theme === 'day';
-    const handleNightStyle = () => {
-        dispatch(setTheme('night'));
-        localStorage.setItem('theme', 'night');
-    };
 
-    const handleDayStyle = () => {
-        dispatch(setTheme('day'));
-        localStorage.setItem('theme', 'day');
-    };
 
-    const handleLanguageChange = (lang) => {
-        // Thay đổi ngôn ngữ bằng i18n
-        i18n.changeLanguage(lang);
 
-        // Cập nhật trạng thái ngôn ngữ trong Redux và localStorage
-        dispatch(setLanguage(lang));
-    };
     const handleToggleMenu = () => {
         setIsMenuOpen(!isMenuOpen); // Toggle menu state
     };
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 540);
+            // Đóng menu khi chuyển từ mobile sang desktop
+            if (window.innerWidth > 540) {
+                setIsMenuOpen(true); // Đảm bảo menu không mở trên màn hình lớn
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <>
@@ -48,23 +47,35 @@ const NavbarCon = () => {
                 </div>
             </div>
             <div className={`nav-container ${theme === 'night' ? 'night-theme' : 'day-theme'} ${isMenuOpen ? 'active' : ''}`}>
-
                 <div className="nav-menu">
-                    <NavLink className="nav-link" to="/home"> <img className="logo-img" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728318311/100_gl2oqb.png" /> </NavLink>
-
-                    <NavLink className={`nav-link  ${pathname === '/' ? 'active' : ''}`} to="/">Home</NavLink>
-                    <NavLink className={`nav-link  ${pathname === '/courses' ? 'active' : ''}`} to="/courses">Courses</NavLink>
-                    <NavLink className={`nav-link  ${pathname === '/about' ? 'active' : ''}`} to="/about">About Us</NavLink>
-                    <NavLink className={`nav-link  ${pathname === '/pricing' ? 'active' : ''}`} to="/pricing">Pricing</NavLink>
-                    <NavLink className={`nav-link  ${pathname === '/contact' ? 'active' : ''}`} to="/contact">Contact</NavLink>
+                    {/* Logo */}
+                    <NavLink className="nav-link moblie" to="/home">
+                        <img className="logo-img" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728318311/100_gl2oqb.png" />
+                    </NavLink>
+                    {/* Các liên kết nav */}
+                    {(isMobile ? isMenuOpen : true) && (
+                        <div className="nav-mobile">
+                            {isMobile && (
+                                <button className="closed" onClick={handleToggleMenu}>X</button>
+                            )}
+                            <NavLink className={`nav-link ${pathname === '/' ? 'active' : ''}`} to="/">Home</NavLink>
+                            <NavLink className={`nav-link ${pathname === '/courses' ? 'active' : ''}`} to="/courses">Courses</NavLink>
+                            <NavLink className={`nav-link ${pathname === '/about' ? 'active' : ''}`} to="/about">About Us</NavLink>
+                            <NavLink className={`nav-link ${pathname === '/pricing' ? 'active' : ''}`} to="/pricing">Pricing</NavLink>
+                            <NavLink className={`nav-link ${pathname === '/contact' ? 'active' : ''}`} to="/contact">Contact</NavLink>
+                        </div>
+                    )}
                 </div>
-
-
-                <div className="nav-menu">
-                    <NavLink className={`nav-link  ${pathname === '/signup' ? 'active' : ''}`} to="/signup">Sign Up</NavLink>
-                    <NavLink className={`nav-link login  ${pathname === '/login' ? 'active' : ''}`} to="/login">Login</NavLink>
+                <div className="nav-menu mobile">
+                    <NavLink className={`nav-link ${pathname === '/signup' ? 'active' : ''}`} to="/signup">Sign Up</NavLink>
+                    <NavLink className={`nav-link login ${pathname === '/login' ? 'active' : ''}`} to="/login">Login</NavLink>
                 </div>
-
+                {/* Nút Unlock và Explore Courses */}
+                {isMobile && (
+                    <div className="unlock-potential">
+                        <button className="unlock-button" onClick={handleToggleMenu}><img className="btn-nav-mobile" src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1732883239/text_16510767_qvknvb.png" /></button>
+                    </div>
+                )}
             </div>
 
         </>

@@ -77,10 +77,10 @@ const Home = () => {
                     <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/zaipier_n9zxyf.png" className="home-start-img-item" />
                     <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/spotify_rxrplg.png" className="home-start-img-item" />
                     <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/zoom_dx26ri.png" className="home-start-img-item" />
-                    <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/amazon_zkhuwi.png" className="home-start-img-item" />
-                    <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/adobe_bmgrry.png" className="home-start-img-item" />
-                    <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/notion_c8n6xe.png" className="home-start-img-item" />
-                    <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/netfixt_emwgz5.png" className="home-start-img-item-end" />
+                    <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/amazon_zkhuwi.png" className="home-start-img-item none" />
+                    <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/adobe_bmgrry.png" className="home-start-img-item none" />
+                    <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/notion_c8n6xe.png" className="home-start-img-item none" />
+                    <img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728399315/netfixt_emwgz5.png" className="home-start-img-item-end none" />
                 </div>
             </div>
             <div className="the-blog"><img src="https://res.cloudinary.com/dhjrrk4pg/image/upload/v1728321202/How-to-Avoid-3-Common-Mistakes-When-Selling-Your-Business_img_ymd6yt.png" className="the-blog-title" />

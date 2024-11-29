@@ -1067,28 +1067,33 @@
                     display:flex;
                     width:fit-content;
                     background-color: white;
-                    margin: 30px auto 60px;
-                    padding: 20px;
+                    margin: 15px auto 30px;
+                    padding: 10px;
                     border-radius: 15px;
                     .home-start-img-item{
-                        width: 165px;
+                        width: 80px;
                         height: auto;
                         object-fit: cover;
-                        padding: 0 20px;
+                        padding: 0 10px;
                         border-right: 0.2px solid rgb(236, 236, 236) ;
                         margin: 0 2px;
+                    }.home-start-img-item.none{
+                        display:none;
                     }
                     .home-start-img-item-end{
-                        width: 150px;
+                        width: 75px;
                         height: auto;
                         object-fit: cover;
-                        padding: 0 20px;
+                        padding: 0 10px;
+                    }
+                    .home-start-img-item-end.none{
+                        display:none;
                     }
                 }
             }
             .benefits-container{
     
-                margin: 100px 0 0 0;
+                margin: 50px 0 0 0;
                 .benefits-title{
                     text-align: start;
                 }
@@ -1104,48 +1109,48 @@
                         text-decoration: none;
                         font-weight: 500;
                         color: black;
-                        padding: 20px;
+                        padding: 10px;
                         background-color: white;
                         border-radius: 10px;
                     }
                 }
                 .benefits.row.box1{
-                    margin: 40px 0;
+                    margin: 20px 0;
                     padding:0;
                     border-radius: 10px;
                     display:flex;
                     .col-md-4.box1-item{
-                        padding:20px;
-                        margin: 0 10px; /* Adjust the margin */
-                        width: calc(33.3333% - 20px);
+                        padding:10px;
+                        margin: 8px 5px; /* Adjust the margin */
+                        width: calc(100% - 10px);
                         background-color: white; 
                         border-radius: 15px;
                         .stt{
                             text-align: end;
-                            font-size: 60px;
+                            font-size: 30px;
                             font-weight: bold;
                         }
                         .item-title{
                             text-align: start;
-                            padding-top: 45px;
-                            padding-bottom: 20px ;
+                            padding-top: 25px;
+                            padding-bottom: 10px ;
                             margin: 0;
                         }
                         .item-describe{
                             text-align: start;
-                            padding-bottom: 10px;
-                            font-size: 15px;
+                            padding-bottom: 5px;
+                            font-size: 10px;
                             font-weight: 500;
                             color:#6e6e6e;
                         }
                             
                         .item-link{
     
-                            padding: 10px;
+                            padding: 5px;
                             text-align: end;
                             .image-link{
-                                width: 45px;
-                                height:45px;
+                                width: 25px;
+                                height:25px;
                                 object-fit: cover;
                             }
                         }
@@ -1154,7 +1159,7 @@
                 
             }
             .our-courses-container{
-                margin: 100px 0 0 0;
+                margin: 50px 0 0 0;
                 .our-courses-title{
                     text-align: start;
                 }
@@ -1170,43 +1175,49 @@
                         text-decoration: none;
                         font-weight: 500;
                         color: black;
-                        padding: 20px;
+                        padding: 10px;
                         background-color: white;
                         border-radius: 10px;
+                        display:flex;
+                        width:max-content;
+                        height:50px;
                     }
                 }
                 .our-courses.row.box {
-                    margin: 40px 0;
+                    margin: 20px 0;
                     padding:0;
                     border-radius: 10px;
                     display:flex;
                     .col-md-6.box-item{
                         padding:30px;
-                        margin: 0 15px; /* Adjust the margin */
-                        width: calc(50% - 30px);
+                        margin: 0 8px; /* Adjust the margin */
+                        width: calc(100% - 16px);
                         background-color: white; 
                         border-radius: 15px;
                         .box-item-image{
                             width:100%;
-                            height:260px;
+                            height:130px;
                             object-fit: cover;
                             border-radius: 15px;
                         }
                         .box-item-cha{
                             display:flex;
                             justify-content: space-between;
-                            padding: 30px 0 20px 0;
+                            padding: 15px 0 10px 0;
+                            align-items: center;
                             .item-time{
                                 display:flex;
                                 .item-category{
-                                    padding: 5px 10px;
-                                    margin-right: 20px;
+                                    padding: 5px;
+                                    margin-right: 10px;
                                     box-shadow: 0 0 0 0.3px rgba(0, 0, 0, 0.8); 
                                     border-radius: 5px;
+                                    font-size: 80%;
                                 }
                             }
                             .item-author{
                                 font-weight: 500;
+                                font-size: 80%;
                             }
                         }
                         .box-item-title{
@@ -1217,14 +1228,14 @@
                         .box-item-content{
                             text-align: start;
                             padding-bottom: 10px;
-                            font-size: 15px;
+                            font-size: 12px;
                             font-weight: 500;
                             color:#6e6e6e;
                         }
                         .get-it-now-item{
                             text-align: center;
                             background-color: rgba(241, 241, 241, 0.603);
-                            padding: 15px;
+                            padding: 8px;
                             border-radius: 10px;
                             margin: 5px 0;
                             a{
@@ -1237,7 +1248,7 @@
                 }
             }
             .our-testimonials-container{
-                margin: 100px 0 0 0;
+                margin: 50px 0 0 0;
                 .our-testimonials-title{
                     text-align: start;
                 }
@@ -1253,32 +1264,35 @@
                         text-decoration: none;
                         font-weight: 500;
                         color: black;
-                        padding: 20px;
+                        padding: 10px;
                         background-color: white;
                         border-radius: 10px;
+                        display:flex;
+                        width:max-content;
+                        height:50px;
                     }
                 }
                 .our-testimonials.row.box {
-                    margin: 40px 0;
+                    margin: 20px 0;
                     padding:0;
                     border-radius: 10px;
                     display:flex;
                     .col-md-6.box-item.testimonials{
-                        margin: 0 15px; /* Adjust the margin */
-                        width: calc(50% - 30px);
+                        margin: 8px; /* Adjust the margin */
+                        width: calc(100% - 16px);
                         background-color: #ffffff; 
                         border-radius: 15px;
                         box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8); 
                         padding:0;
                         .box-item-testimonials{
                             text-align: start;
-                            padding:  30px 30px 40px 30px ;
+                            padding:  15px 15px 20px 15px ;
                             border-bottom: 1px solid rgba(197, 197, 197, 0.8);
                         }
                         .box-item-user{
                             display:flex;
                             justify-content: space-between;
-                            padding: 30px ;
+                            padding: 15px ;
                             background-color: #fcfcfc;
                             border-bottom-left-radius: 10px;
                             border-bottom-right-radius: 10px;
@@ -1288,15 +1302,15 @@
                                 align-items: center;
                                 font-weight: 500;
                                 .user-avatar-item{
-                                    width: 50px;
-                                    height: 50px;
+                                    width: 25px;
+                                    height: 25px;
                                     border-radius: 5px;
                                     object-fit: cover;
-                                    margin: 0 10px 0 0 ; 
+                                    margin: 0 5px 0 0 ; 
                                 }
                             }
                             .read-full{
-                                height:50px;
+                                height:25px;
                                 display:flex;
                                 align-items: center;
                                 background-color: #f0f0f0;
@@ -1305,7 +1319,7 @@
                                     text-decoration: none;
                                     color: black;
                                     font-weight: 500;
-                                    padding: 10px;
+                                    padding: 5px;
                                 }
                             }
                             
@@ -1314,12 +1328,12 @@
                 }
             }
             .our-pricing-container{
-                margin: 100px 0 0 0;
+                margin: 50px 0 0 0;
                 .our-pricing-title{
                     text-align: start;
                 }
                 .box-our-pricing-content{
-                    display:flex;
+                    display:block;
                     justify-content: space-between;
                     .our-pricing-content{
                         text-align: start;
@@ -1335,6 +1349,7 @@
                         height:max-content;
                         padding: 15px;
                         border-radius: 10px;
+                        justify-content: center;
                         .monthly{
                             padding: 10px 15px;
                             margin: 0 5px;
@@ -1355,14 +1370,14 @@
                 }
                 .pricing-box.row{
                     background-color: white !important;
-                    padding: 40px;
-                    margin-top: 30px;
+                    padding: 20px;
+                    margin-top: 15px;
                     border-radius: 15px;
                     .pricing-box-item.col-md-6{
                         background-color: #f7f7f7;
-                        margin: 0 15px; /* Adjust the margin */
-                        width: calc(50% - 30px);
-                        padding: 20px;
+                        margin: 8px; /* Adjust the margin */
+                        width: calc(100% - 16px);
+                        padding: 10px;
                         border-radius: 10px;
                         border: 1px solid rgb(224, 224, 224);
                         .pricing-box-item-title{
@@ -1370,28 +1385,28 @@
                             background-color: rgba(255, 149, 1, 0.096);
                             border: 1px solid rgba(255, 149, 1, 0.349);
                             border-radius: 5px;
-                            margin: 25px 0;
+                            margin: 15px 0;
                         }
                         .pricing-box-item-month{
                             .pricing-box-item-higlight{
-                                font-size: 70px;
+                                font-size: 40px;
                                 font-weight: bold;
-                                margin: 0 20px;
+                                margin: 0 10px;
                             }
                         }
                         .pricing-box-item-list{
-                            margin: 20px 0;
-                            padding: 30px 0 0 0;
+                            margin: 10px 0;
+                            padding: 15px 0 0 0;
                             background-color: #ffffff;
                             border: 1px solid rgb(224, 224, 224);
                             border-radius: 15px;
                             .item-list-title{
-                                padding: 20px 0
+                                padding: 10px 0
                             }
                             .item-list-data{
                                 display:flex;
                                 align-items: center;
-                                margin: 30px;
+                                margin: 15px;
                                 border: 1px solid rgb(224, 224, 224);
                                 padding: 10px;
                                 border-radius: 5px;
@@ -1425,8 +1440,8 @@
             }
             .questions-container{
                 .questions-box.row{
-                    margin: 80px 0;
-                    padding:80px 60px;
+                    margin: 40px 0;
+                    padding:40px 30px;
                     border-radius: 10px;
                     display:flex;
                     background-color: #ffffff; 
@@ -1454,7 +1469,7 @@
                             border-radius: 10px;
                             width:fit-content;
                             box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8); 
-                            margin: 35px 0;
+                            margin: 20px 0;
                             .questions-box-item-faq-link{
                                 text-decoration: none;
                                 color: black;
@@ -1465,7 +1480,7 @@
                 .col-md-7.questions-box-item{
                     .questions-box-item-data{
                         box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8);
-                        padding: 3px 45px 0px 45px;
+                        padding: 3px 25px 0px 25px;
                         border-radius: 15px;
                         .questions-box-item-question{
                             display:flex;
@@ -1494,7 +1509,7 @@
                             
                         }
                         .questions-box-item-content{
-                            padding: 35px 0 30px 0;
+                            padding: 15px 0 10px 0;
                             text-align: start;
                             font-weight: 500;
                             color:#6e6e6e
@@ -1502,7 +1517,7 @@
                         .questions-box-item-answer{
                             display:flex;
                             justify-content: space-between;
-                            padding: 10px 20px ;
+                            padding: 5px 10px ;
                             box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8);
                             background-color: #f7f7f7;
                             align-items: center;
@@ -1513,9 +1528,9 @@
                                 font-size: 15px;
                             }
                             .questions-box-item-image{
-                                width: 44px;
-                                height:44px;
-                                padding: 10px;
+                                width: 30px;
+                                height:30px;
+                                padding: 5px;
                                 background-color: rgba(255, 255, 255, 0.096);
                                 //border: 1px solid rgba(255, 149, 1, 0.041);
                                 border-radius: 50%;
@@ -1526,13 +1541,13 @@
                     }
                     .questions-box-item-data.expanded{
                         box-shadow: 0 0 0 0.3px rgba(167, 167, 167, 0.8);
-                        padding: 30px 45px 45px 45px;
+                        padding: 15px 25px 25px 25px;
                         border-radius: 15px;
                         .questions-box-item-question{
                             display:flex;
                             justify-content: space-between;
-                            margin: 10px 0;
-                            padding:35px 0;
+                            margin: 5px 0;
+                            padding:15px 0;
                             border-bottom: 1px solid rgba(224, 224, 224, 0.8);
                             .questions-box-item-question-data{
                                 font-weight: 500;
@@ -1555,7 +1570,7 @@
                             
                         }
                         .questions-box-item-content{
-                            padding: 35px 0 30px 0;
+                            padding: 15px 0 10px 0;
                             text-align: start;
                             font-weight: 500;
                             color:#6e6e6e
@@ -1573,8 +1588,8 @@
                                 font-size: 15px;
                             }
                             .questions-box-item-image{
-                                width: 44px;
-                                height:44px;
+                                width: 30px;
+                                height:30px;
                                 padding: 10px;
                                 background-color: rgba(255, 255, 255, 0.096);
                                 //border: 1px solid rgba(255, 149, 1, 0.041);
@@ -1590,395 +1605,7 @@
             }
             }
         }
-        &.night-theme{
-            width: 90% !important;
-            padding: 20px 0 0 0;
-            margin: 0 auto;
-            background-color: rgb(0, 0, 0);
-            color:white;
-            .the-blog{
-                .the-blog-title{
-                    border-top: 1px solid rgb(139, 139, 139);
-                    border-bottom: 1px solid rgb(139, 139, 139);
-                    width: 100%;
-                    height:auto;
-                    object-fit: cover;
-        
-                }
-               
-            }
-            .recent-container{
-                margin: 5% 0;
-                .recent-title{
-        
-                }
-                .recent-box.row {
-                    margin: 0;
-            
-                    .col-md-6.recent-box-item{
-                        padding: 0 22px 0 0;
-                        .recent-box-item-image{
-                            margin: 30px 0 30px 0;
-                            width: 100%;
-                            height:200px;
-                            object-fit: cover;
-                        }
-                        .item-name{
-                            padding:0;
-                            margin: 0;
-                            color: rgb(151, 53, 231);
-                            font-size: 80%;
-                            font-weight: 500;
-                        }
-                        .item-box{
-                            display: flex;
-                            justify-content: space-between; // Đẩy các phần tử ra hai đầu
-                            align-items:flex-start;
-                            .item-blog-title{
-                                color: rgb(255, 255, 255);
-                                margin:0;
-                                padding:0;
-                                padding: 13px 0;
-                                font-weight: 645;
-                            }
-                            .item-box-img{
-                                width: 20px;
-                                height: 20px;
-                                margin-top: 20px;
-                            }
-                        }
-                        
-                        .all-tag{
-                            display:flex;
-                            .the-tag1{
-                                display:flex;
-                                width:fit-content;
-                                padding: 5px 10px ;
-                                color:rgb(181, 53, 231);
-                                background-color:rgba(232, 225, 235, 0.836);
-                                border-radius: 20px;
-                                font-size: 85%;
-                                font-weight: 500;
-                                margin-right: 20px;
-                            }
-                            .the-tag2{
-                                display:flex;
-                                width:fit-content;
-                                padding: 5px 10px ;
-                                color:rgb(0, 60, 255);
-                                background-color:rgba(212, 220, 248, 0.836);
-                                border-radius: 20px;
-                                font-size: 85%;
-                                font-weight: 500;
-                                margin-right: 20px;
-                            }
-                            .the-tag3{
-                                display:flex;
-                                width:fit-content;
-                                padding: 5px 10px ;
-                                color:rgb(255, 0, 106);
-                                background-color:rgba(245, 207, 223, 0.836);
-                                border-radius: 20px;
-                                font-size: 85%;
-                                font-weight: 500;
-                                
-                            }
-                        }
-                    }
-                    .col-md-6{
-                        .row{
-                            .col-md-12.recent-box-item{
-                             //   margin: 30px 0;
-                                .box-right-box1.row{
-                                    margin: 0;
-                                    padding-bottom: 22px;
-                                    .col-md-7.item-right-data{
-                                        display:flex;
-                                        padding:0;
-                                        .box-right-img{
-                                            margin: 30px 0 0 0;
-                                            width: 100%;
-                                            height:185px;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                    .col-md-5.item-right-data{
-                                        margin: 30px 0 0 0;
-                                        padding: 0 0 0 22px;
-                                        .item-name{
-                                            padding:0;
-                                            margin: 0;
-                                            color: rgb(151, 53, 231);
-                                            font-size: 80%;
-                                            font-weight: 500;
-                                        }
-                                        .item-box{
-                                            display: flex;
-                                            justify-content: space-between; // Đẩy các phần tử ra hai đầu
-                                            align-items:flex-start;
-                                            .item-blog-title{
-                                                color: rgb(223, 223, 223);
-                                                margin:0;
-                                                padding:0;
-                                                padding: 13px 0;
-                                                font-weight: 645;
-                                            }
-                                            .item-box-img{
-                                                width: 15px;
-                                                height: 15px;
-                                                margin-top: 20px;
-                                            }
-                                        }
-                                        .item-blog-title{
-                                            color: rgb(255, 255, 255);
-                                            margin:0;
-                                            padding: 8px 0;
-                                            font-size: 110%;
-                                            font-weight: 645;
-                                        }
-                                        .item-blog-describe{
-                                            font-size: 90%;
-                                            color:rgb(201, 201, 201) !important;
-                                        }
-                                        .all-tag{
-                                            display:flex;
-                                            .the-tag1{
-                                                display:flex;
-                                                width:fit-content;
-                                                padding: 5px 10px ;
-                                                color:rgb(181, 53, 231);
-                                                background-color:rgba(232, 225, 235, 0.836);
-                                                border-radius: 20px;
-                                                font-size: 85%;
-                                                font-weight: 500;
-                                                margin-right: 20px;
-                                                margin-bottom: 0;
-                                            }
-                                            .the-tag2{
-                                                display:flex;
-                                                width:fit-content;
-                                                padding: 5px 10px ;
-                                                color:rgb(0, 60, 255);
-                                                background-color:rgba(212, 220, 248, 0.836);
-                                                border-radius: 20px;
-                                                font-size: 85%;
-                                                font-weight: 500;
-                                                margin-right: 20px;
-                                                margin-bottom: 0;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .row.recent-box2{
-                        .col-md-6.recent-box-item{
-                            padding:0 20px 0 0;
-                            .recent-box-item-image{
-                                margin: 30px 0 30px 0;
-                                width: 100%;
-                                height:240px;
-                                object-fit: cover;
-                            }
-                            
-                        }
-                        .col-md-6.recent-box-item2{
-                            margin: 30px 0 30px 0;
-                            .item-name{
-                                
-                                padding:0;
-                                margin: 0;
-                                color: rgb(151, 53, 231);
-                                font-size: 80%;
-                                font-weight: 500;
-                            }
-                            .item-box{
-                                display: flex;
-                                justify-content: space-between; // Đẩy các phần tử ra hai đầu
-                                align-items:flex-start;
-                                .item-blog-title{
-                                    color: rgb(255, 255, 255);
-                                    margin:0;
-                                    padding:0;
-                                    padding: 13px 0;
-                                    font-weight: 645;
-                                }
-                                .item-box-img{
-                                    width: 20px;
-                                    height: 20px;
-                                    margin-top: 20px;
-                                }
-                            }
-                            
-                            .all-tag{
-                                display:flex;
-                                .the-tag1{
-                                    display:flex;
-                                    width:fit-content;
-                                    padding: 5px 10px ;
-                                    color:rgb(181, 53, 231);
-                                    background-color:rgba(232, 225, 235, 0.836);
-                                    border-radius: 20px;
-                                    font-size: 85%;
-                                    font-weight: 500;
-                                    margin-right: 20px;
-                                }
-                                .the-tag2{
-                                    display:flex;
-                                    width:fit-content;
-                                    padding: 5px 10px ;
-                                    color:rgb(0, 60, 255);
-                                    background-color:rgba(212, 220, 248, 0.836);
-                                    border-radius: 20px;
-                                    font-size: 85%;
-                                    font-weight: 500;
-                                    margin-right: 20px;
-                                }
-                                .the-tag3{
-                                    display:flex;
-                                    width:fit-content;
-                                    padding: 5px 10px ;
-                                    color:rgb(255, 0, 106);
-                                    background-color:rgba(245, 207, 223, 0.836);
-                                    border-radius: 20px;
-                                    font-size: 85%;
-                                    font-weight: 500;
-                                    
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            
-            .all-post-container{
-                padding-bottom: 20px;
-                border-bottom: 1px solid rgb(139, 139, 139);
-                .all-post-title{
-                    color: rgb(255, 255, 255);
-                    margin:0 0 30px 0;
-                    padding:0;
-                    font-weight: 645;
-                }
-                .map-all-post.row{
-                    margin: 0;
-                    .all-post-box.col-md-4{
-                        padding:0 20px 0 0;
-                        .recent-box-item-image{
-                            margin: 30px 0 30px 0;
-                            width: 100%;
-                            height:240px;
-                            object-fit: cover;
-                        }
-                        .item-name{
-                            padding:0;
-                            margin: 0;
-                            color: rgb(151, 53, 231);
-                            font-size: 80%;
-                            font-weight: 500;
-                        }
-                        .item-box{
-                            display: flex;
-                            justify-content: space-between; 
-                            .item-blog-title{
-                                color: rgb(255, 255, 255);
-                                margin:0;
-                                padding: 13px 13px 13px 0 ;
-                                font-weight: 645;
-                            }
-                            .item-box-img{
-                                width: 15px;
-                                height: 15px;
-                                margin-top: 20px ;
-        
-                            }
-                        }
-                        .all-tag{
-                            display:flex;
-                            .the-tag1{
-                                display:flex;
-                                width:fit-content;
-                                padding: 5px 10px ;
-                                color:rgb(181, 53, 231);
-                                background-color:rgba(232, 225, 235, 0.836);
-                                border-radius: 20px;
-                                font-size: 85%;
-                                font-weight: 500;
-                                margin-right: 20px;
-                            }
-                            .the-tag2{
-                                display:flex;
-                                width:fit-content;
-                                padding: 5px 10px ;
-                                color:rgb(0, 60, 255);
-                                background-color:rgba(212, 220, 248, 0.836);
-                                border-radius: 20px;
-                                font-size: 85%;
-                                font-weight: 500;
-                                margin-right: 20px;
-                            }
-                            .the-tag3{
-                                display:flex;
-                                width:fit-content;
-                                padding: 5px 10px ;
-                                color:rgb(255, 0, 106);
-                                background-color:rgba(245, 207, 223, 0.836);
-                                border-radius: 20px;
-                                font-size: 85%;
-                                font-weight: 500;
-                                
-                            }
-                        }
-                        
-                       
-                    }
-                }
-            }
-            .pagination {
-                display: flex;
-                list-style: none;
-                justify-content: center;
-                padding-top: 20px;
-            
-                .page-item {
-                    margin: 0 6px;
-            
-                    .page-link {
-                        text-decoration: none;
-                        color: #3d3d3d; // Màu chữ
-                        transition: background-color 0.3s; 
-                        border: none;
-                        outline: none; 
-                        border-radius: 20px;
-                        &:hover {
-                            background-color: rgba(53, 53, 53, 0.842); 
-                            color: white;
-                            border-radius: 20px;
-        
-                        }
-                    }
-            
-                    .page-link:focus {
-                        outline: none; // Xóa viền xanh khi focus
-                        box-shadow: none; // Xóa bóng nếu có
-                    }
-            
-                    .disabled {
-                        margin-right: 10%;
-                    }
-                }
-            
-                .active {
-                    .page-link {
-                        border: 1px solid #8f8f8f;
-                        background: white;
-                        border-radius: 20px;
-        
-                    }
-                }
-            }
-        }
+      
         
     }
 }
